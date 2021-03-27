@@ -9,8 +9,10 @@ const App = (props) => {
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={props.car} />
-        <AddedFeatures car={props.car} />
+        <div>
+          <Header car={props.car} />
+          <AddedFeatures car={props.car} />
+        </div>
       </div>
       <div className="box">
         <AdditionalFeatures additionalFeatures={props.additionalFeatures} />

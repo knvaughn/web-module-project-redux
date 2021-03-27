@@ -6,7 +6,7 @@ const AdditionalFeature = props => {
   return (
     <li>
       {/* Add an onClick that will let you add a feature to your car */}
-      <button onClick={()=>{
+      <button disabled={props.car.features.includes(props.feature)} onClick={()=>{
         if (!props.car.features.includes(props.feature)) {
           props.addFeature(props.feature)
         }
