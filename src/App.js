@@ -1,11 +1,11 @@
 import React from 'react';
-
+import {connect} from 'react-redux';
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
-const App = () => {
+const App = (props) => {
   const state = {
     additionalPrice: 0,
     car: {
@@ -37,4 +37,10 @@ const App = () => {
   );
 };
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    loading: state.loading
+  }
+}
+
+export default connect(mapStateToProps, {})(App);
